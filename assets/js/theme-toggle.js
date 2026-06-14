@@ -1,22 +1,33 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const themeToggle = document.getElementById("theme-toggle");
+    const themeToggles = document.querySelectorAll("[data-theme-toggle]");
     const body = document.body;
 
-    // Verificar se há um tema salvo no localStorage
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-        body.setAttribute("data-theme", savedTheme);
-        themeToggle.checked = savedTheme === "dark";
+    if (!themeToggles.length) {
+        return;
     }
 
-    // Adicionar evento de mudança ao toggle
-    themeToggle.addEventListener("change", function() {
-        if (this.checked) {
-            body.setAttribute("data-theme", "dark");
-            localStorage.setItem("theme", "dark");
-        } else {
-            body.setAttribute("data-theme", "light");
-            localStorage.setItem("theme", "light");
-        }
+    const savedTheme = localStorage.getItem("theme") || "light";
+
+    function applyTheme(theme) {
+        const isDark = theme === "dark";
+
+        body.setAttribute("data-theme", theme);
+        localStorage.setItem("theme", theme);
+
+        themeToggles.forEach(function(toggle) {
+            toggle.checked = isDark;
+            toggle.setAttribute(
+                "aria-label",
+                isDark ? "Desativar tema escuro" : "Ativar tema escuro"
+            );
+        });
+    }
+
+    applyTheme(savedTheme);
+
+    themeToggles.forEach(function(toggle) {
+        toggle.addEventListener("change", function() {
+            applyTheme(this.checked ? "dark" : "light");
+        });
     });
 });
