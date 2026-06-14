@@ -1,0 +1,54 @@
+.data-table-wrapper {
+    overflow: hidden;
+
+    border: 1px solid var(--border-soft);
+    border-radius: 1rem;
+
+    box-shadow: var(--card-shadow);
+}
+
+.data-table {
+    --bs-table-bg: var(--surface-table);
+    --bs-table-color: var(--color-text-page);
+    --bs-table-border-color: var(--border-soft);
+    --bs-table-striped-bg: var(--surface-table-alternate);
+    --bs-table-striped-color: var(--color-text-page);
+    --bs-table-hover-bg: var(--table-hover);
+    --bs-table-hover-color: var(--color-text-page);
+
+    margin-bottom: 0;
+
+    thead {
+        border-bottom: 3px solid var(--table-header-border);
+    }
+
+    thead th {
+        padding: 1rem;
+
+        color: var(--table-header-text);
+        background-color: var(--table-header-bg);
+
+        border: none;
+
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+    tbody td {
+        padding: 0.9rem 1rem;
+        vertical-align: middle;
+    }
+
+    tbody tr {
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: var(--table-hover);
+        }
+    }
+}

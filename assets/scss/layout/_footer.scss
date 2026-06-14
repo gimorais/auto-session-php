@@ -1,0 +1,70 @@
+@use "../abstracts/variables";
+
+footer {
+    width: 100%;
+
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 0.05em;
+    color: variables.$color-text-light;
+}
+
+.footer {
+    width: 100%;
+    border-top: 2px solid var(--footer-border-top);
+
+    --s: 170px;
+    --thickness: 15px;
+
+    background-color: variables.$footer-bg-primary;
+
+    background-image: repeating-linear-gradient(
+        45deg,
+        variables.$footer-bg-secondary 0 var(--thickness),
+        transparent var(--thickness) calc(var(--thickness) * 2)
+        ),
+        repeating-linear-gradient(
+        -45deg,
+        variables.$footer-bg-tertiary 0 var(--thickness),
+        transparent var(--thickness) calc(var(--thickness) * 2)
+        );
+
+    background-size: var(--s) var(--s);
+
+    &__text {
+        &__author {
+            text-decoration: none;
+            color: variables.$pink;
+            position: relative;
+            border: none;
+            background: none;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: color;
+        }
+
+        &__author:focus,
+        &__author:hover {
+            color: variables.$pink;
+        }
+
+        &__author:focus:after,
+        &__author:hover:after {
+            width: 100%;
+            left: 0%;
+        }
+
+        &__author:after {
+            content: "";
+            pointer-events: none;
+            bottom: -2px;
+            left: 50%;
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: variables.$pink;
+            transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+            transition-duration: 400ms;
+            transition-property: width, left;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+.app-alert {
+    --app-alert-accent: var(--alert-info-accent);
+    --app-alert-bg: var(--alert-info-bg);
+    --app-alert-border: var(--alert-info-border);
+
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+
+    padding: 1rem 3.25rem 1rem 1rem;
+
+    color: var(--color-text-page);
+    background-color: var(--app-alert-bg);
+
+    border: 1px solid var(--app-alert-border);
+    border-left: 4px solid var(--app-alert-accent);
+    border-radius: 0.8rem;
+
+    box-shadow: 0 8px 22px rgba(18, 8, 31, 0.08);
+
+    &__icon {
+        display: grid;
+        flex-shrink: 0;
+        place-items: center;
+
+        width: 2.25rem;
+        height: 2.25rem;
+
+        color: var(--app-alert-accent);
+        background-color: color-mix(
+            in srgb,
+            var(--app-alert-accent) 12%,
+            transparent
+        );
+
+        border: 1px solid var(--app-alert-border);
+        border-radius: 50%;
+
+        font-size: 1rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+
+        min-width: 0;
+        padding-top: 0.05rem;
+    }
+
+    &__title {
+        color: var(--app-alert-accent);
+
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        line-height: 1.1;
+    }
+
+    &__message {
+        color: var(--color-text-page);
+        line-height: 1.45;
+    }
+
+    strong {
+        color: var(--app-alert-accent);
+    }
+
+    .btn-close {
+        opacity: 0.55;
+        filter: var(--alert-close-filter);
+
+        transition:
+            opacity 0.2s ease,
+            transform 0.2s ease;
+
+        &:hover {
+            opacity: 0.9;
+            transform: scale(1.08);
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem var(--focus-ring);
+        }
+    }
+
+    &--success {
+        --app-alert-accent: var(--alert-success-accent);
+        --app-alert-bg: var(--alert-success-bg);
+        --app-alert-border: var(--alert-success-border);
+    }
+
+    &--danger {
+        --app-alert-accent: var(--alert-danger-accent);
+        --app-alert-bg: var(--alert-danger-bg);
+        --app-alert-border: var(--alert-danger-border);
+    }
+
+    &--warning {
+        --app-alert-accent: var(--alert-warning-accent);
+        --app-alert-bg: var(--alert-warning-bg);
+        --app-alert-border: var(--alert-warning-border);
+    }
+
+    &--info {
+        --app-alert-accent: var(--alert-info-accent);
+        --app-alert-bg: var(--alert-info-bg);
+        --app-alert-border: var(--alert-info-border);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .app-alert {
+        padding-left: 0.85rem;
+
+        &__icon {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}

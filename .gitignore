@@ -1,0 +1,17 @@
+# Dependências locais
+node_modules/
+
+# Variáveis de ambiente e arquivos locais
+.env
+.env.*
+!.env.example
+*.log
+
+# Editores e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Arquivos compactados
+*.zip

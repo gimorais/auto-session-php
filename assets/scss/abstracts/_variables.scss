@@ -1,0 +1,201 @@
+/* ========================================
+    Header
+======================================== */
+
+$header-bg-primary: #12081f;
+$header-bg-secondary: #411d7188;
+$header-bg-tertiary: #e30fd555;
+
+$header-border-bottom-light: #411d71;
+$header-border-bottom-dark: #e30fd5;
+
+/* ========================================
+    Footer
+======================================== */
+
+$footer-bg-primary: #101010;
+$footer-bg-secondary: #2b2b2b88;
+$footer-bg-tertiary: #5c5c5c55;
+
+$footer-border-top-light: #2b2b2b;
+$footer-border-top-dark: #5c5c5c;
+
+/* ========================================
+    Tema geral
+======================================== */
+
+$color-bg-light: #e8e8e8;
+$color-bg-dark: #212121;
+
+$color-text-light: #ffffff;
+$color-text-dark: #1c1c1c;
+
+/* ========================================
+    Cards do menu
+======================================== */
+
+$card-background: #17121c;
+$card-background-secondary: #211629;
+$card-border: rgba(255, 255, 255, 0.13);
+$card-text: $color-text-light;
+$card-muted: #bcb4c2;
+$card-media-background: #ffffff;
+
+/* ========================================
+    Cores de destaque
+======================================== */
+
+$purple: #7d24b4;
+$purple-light: #aa4bea;
+
+$pink: #f02bd4;
+$pink-light: #ff70ec;
+
+$model-accent: #9c4dff;
+
+/* ========================================
+    Formulários e tabelas
+======================================== */
+
+$surface-card-light: #ffffff;
+$surface-card-dark: #292929;
+
+$surface-input-light: #ffffff;
+$surface-input-dark: #1c1c1c;
+
+$surface-table-light: #ffffff;
+$surface-table-dark: #292929;
+
+$surface-table-alternate-light: #f4f0f8;
+$surface-table-alternate-dark: #242424;
+
+$text-muted-light: #5f5664;
+$text-muted-dark: #d1cbd5;
+
+$border-soft-light: rgba($purple, 0.22);
+$border-soft-dark: rgba($pink, 0.26);
+
+$accent-primary-light: #411d71;
+$accent-primary-dark: $purple-light;
+
+$accent-secondary-light: #e30fd5;
+$accent-secondary-dark: $pink-light;
+
+$focus-ring-light: rgba($purple, 0.2);
+$focus-ring-dark: rgba($pink, 0.18);
+
+$table-hover-light: rgba($purple, 0.1);
+$table-hover-dark: rgba($pink, 0.08);
+
+$card-shadow-light: 0 14px 35px rgba(18, 8, 31, 0.14);
+$card-shadow-dark: 0 14px 35px rgba(0, 0, 0, 0.32);
+
+/* ========================================
+    Cabeçalho das tabelas
+======================================== */
+
+$table-header-bg-light: #eee9f3;
+$table-header-bg-dark: #17121c;
+
+$table-header-text-light: #411d71;
+$table-header-text-dark: #ff70ec;
+
+$table-header-border-light: $purple;
+$table-header-border-dark: $pink;
+
+/* ========================================
+    Barra de pesquisa
+======================================== */
+
+$search-bg-light: rgba(255, 255, 255, 0.72);
+$search-bg-dark: rgba(23, 18, 28, 0.78);
+
+$search-border-light: rgba($purple, 0.25);
+$search-border-dark: rgba($pink, 0.32);
+
+$search-placeholder-light: #766d7c;
+$search-placeholder-dark: #aaa1b0;
+
+/* ========================================
+    Limpeza da sessão
+======================================== */
+
+$menu-clear-danger-light: #c92a3a;
+$menu-clear-danger-dark: #ff6675;
+
+$menu-clear-surface-light: #fffafa;
+$menu-clear-surface-dark: #1b181c;
+
+$menu-clear-border-light: rgba($menu-clear-danger-light, 0.24);
+$menu-clear-border-dark: rgba($menu-clear-danger-dark, 0.32);
+
+$menu-clear-icon-bg-light: rgba($menu-clear-danger-light, 0.1);
+$menu-clear-icon-bg-dark: rgba($menu-clear-danger-dark, 0.14);
+
+$menu-clear-stat-bg-light: rgba($purple, 0.08);
+$menu-clear-stat-bg-dark: rgba($pink, 0.09);
+
+$menu-clear-shadow-light:
+    0 14px 35px rgba(18, 8, 31, 0.1);
+
+$menu-clear-shadow-dark:
+    0 14px 35px rgba(0, 0, 0, 0.28);
+
+    /* ========================================
+    Alertas
+======================================== */
+
+/* Sucesso */
+
+$alert-success-light: #198754;
+$alert-success-dark: #4fd394;
+
+$alert-success-bg-light: rgba($alert-success-light, 0.1);
+$alert-success-bg-dark: rgba($alert-success-dark, 0.12);
+
+$alert-success-border-light: rgba($alert-success-light, 0.28);
+$alert-success-border-dark: rgba($alert-success-dark, 0.32);
+
+/* Erro */
+
+$alert-danger-light: #c92a3a;
+$alert-danger-dark: #ff6675;
+
+$alert-danger-bg-light: rgba($alert-danger-light, 0.09);
+$alert-danger-bg-dark: rgba($alert-danger-dark, 0.12);
+
+$alert-danger-border-light: rgba($alert-danger-light, 0.26);
+$alert-danger-border-dark: rgba($alert-danger-dark, 0.34);
+
+/* Aviso */
+
+$alert-warning-light: #a96400;
+$alert-warning-dark: #ffc857;
+
+$alert-warning-bg-light: rgba($alert-warning-light, 0.1);
+$alert-warning-bg-dark: rgba($alert-warning-dark, 0.12);
+
+$alert-warning-border-light: rgba($alert-warning-light, 0.28);
+$alert-warning-border-dark: rgba($alert-warning-dark, 0.34);
+
+/* Informação */
+
+$alert-info-light: #1769aa;
+$alert-info-dark: #64b5f6;
+
+$alert-info-bg-light: rgba($alert-info-light, 0.09);
+$alert-info-bg-dark: rgba($alert-info-dark, 0.12);
+
+$alert-info-border-light: rgba($alert-info-light, 0.26);
+$alert-info-border-dark: rgba($alert-info-dark, 0.32);
+
+/* ========================================
+    Cards de tecnologias
+======================================== */
+
+$tech-php: #777bb4;
+$tech-javascript: #e5b800;
+$tech-html: #e44d26;
+$tech-session: #18a689;
+$tech-bootstrap: #7952b3;
+$tech-scss: #cc6699;

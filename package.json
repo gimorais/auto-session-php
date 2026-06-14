@@ -1,0 +1,22 @@
+{
+  "name": "auto-session-php",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mini sistema acadêmico de cadastro de marcas e modelos com PHP e sessões.",
+  "scripts": {
+    "sass": "sass --watch assets/scss/style.scss:assets/css/style.css",
+    "build:css": "sass --style=compressed --no-source-map assets/scss/style.scss:assets/css/style.css"
+  },
+  "keywords": [
+    "php",
+    "javascript",
+    "bootstrap",
+    "scss",
+    "session"
+  ],
+  "author": "Giovana Silva Morais",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

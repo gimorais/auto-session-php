@@ -1,0 +1,125 @@
+@use "../abstracts/variables";
+
+:root {
+    --color-bg-page: #{variables.$color-bg-light};
+    --color-text-page: #{variables.$color-text-dark};
+
+    --surface-card: #{variables.$surface-card-light};
+    --surface-input: #{variables.$surface-input-light};
+    --surface-table: #{variables.$surface-table-light};
+    --surface-table-alternate: #{variables.$surface-table-alternate-light};
+
+    --text-muted: #{variables.$text-muted-light};
+    --border-soft: #{variables.$border-soft-light};
+
+    --accent-primary: #{variables.$accent-primary-light};
+    --accent-secondary: #{variables.$accent-secondary-light};
+
+    --focus-ring: #{variables.$focus-ring-light};
+    --table-hover: #{variables.$table-hover-light};
+    --card-shadow: #{variables.$card-shadow-light};
+
+    --header-border-bottom: #{variables.$header-border-bottom-light};
+    --footer-border-top: #{variables.$footer-border-top-light};
+
+    --menu-tag-color: #{variables.$purple-light};
+    --menu-tag-background: #{rgba(variables.$purple, 0.22)};
+    --menu-tag-border: #{rgba(variables.$purple-light, 0.55)};
+
+    --menu-clear-danger: #{variables.$menu-clear-danger-light};
+    --menu-clear-surface: #{variables.$menu-clear-surface-light};
+    --menu-clear-border: #{variables.$menu-clear-border-light};
+    --menu-clear-icon-bg: #{variables.$menu-clear-icon-bg-light};
+    --menu-clear-stat-bg: #{variables.$menu-clear-stat-bg-light};
+    --menu-clear-shadow: #{variables.$menu-clear-shadow-light};
+
+    --table-header-bg: #{variables.$table-header-bg-light};
+    --table-header-text: #{variables.$table-header-text-light};
+    --table-header-border: #{variables.$table-header-border-light};
+
+    --search-bg: #{variables.$search-bg-light};
+    --search-border: #{variables.$search-border-light};
+    --search-placeholder: #{variables.$search-placeholder-light};
+
+    /* Alertas */
+
+    --alert-success-accent: #{variables.$alert-success-light};
+    --alert-success-bg: #{variables.$alert-success-bg-light};
+    --alert-success-border: #{variables.$alert-success-border-light};
+
+    --alert-danger-accent: #{variables.$alert-danger-light};
+    --alert-danger-bg: #{variables.$alert-danger-bg-light};
+    --alert-danger-border: #{variables.$alert-danger-border-light};
+
+    --alert-warning-accent: #{variables.$alert-warning-light};
+    --alert-warning-bg: #{variables.$alert-warning-bg-light};
+    --alert-warning-border: #{variables.$alert-warning-border-light};
+
+    --alert-info-accent: #{variables.$alert-info-light};
+    --alert-info-bg: #{variables.$alert-info-bg-light};
+    --alert-info-border: #{variables.$alert-info-border-light};
+
+    --alert-close-filter: none;
+}
+
+[data-theme="dark"] {
+    --color-bg-page: #{variables.$color-bg-dark};
+    --color-text-page: #{variables.$color-text-light};
+
+    --surface-card: #{variables.$surface-card-dark};
+    --surface-input: #{variables.$surface-input-dark};
+    --surface-table: #{variables.$surface-table-dark};
+    --surface-table-alternate: #{variables.$surface-table-alternate-dark};
+
+    --text-muted: #{variables.$text-muted-dark};
+    --border-soft: #{variables.$border-soft-dark};
+
+    --accent-primary: #{variables.$accent-primary-dark};
+    --accent-secondary: #{variables.$accent-secondary-dark};
+
+    --focus-ring: #{variables.$focus-ring-dark};
+    --table-hover: #{variables.$table-hover-dark};
+    --card-shadow: #{variables.$card-shadow-dark};
+
+    --header-border-bottom: #{variables.$header-border-bottom-dark};
+    --footer-border-top: #{variables.$footer-border-top-dark};
+
+    --menu-tag-color: #{variables.$pink-light};
+    --menu-tag-background: #{rgba(variables.$pink, 0.1)};
+    --menu-tag-border: #{rgba(variables.$pink, 0.3)};
+
+    --menu-clear-danger: #{variables.$menu-clear-danger-dark};
+    --menu-clear-surface: #{variables.$menu-clear-surface-dark};
+    --menu-clear-border: #{variables.$menu-clear-border-dark};
+    --menu-clear-icon-bg: #{variables.$menu-clear-icon-bg-dark};
+    --menu-clear-stat-bg: #{variables.$menu-clear-stat-bg-dark};
+    --menu-clear-shadow: #{variables.$menu-clear-shadow-dark};
+
+    --table-header-bg: #{variables.$table-header-bg-dark};
+    --table-header-text: #{variables.$table-header-text-dark};
+    --table-header-border: #{variables.$table-header-border-dark};
+
+    --search-bg: #{variables.$search-bg-dark};
+    --search-border: #{variables.$search-border-dark};
+    --search-placeholder: #{variables.$search-placeholder-dark};
+
+    /* Alertas */
+
+    --alert-success-accent: #{variables.$alert-success-dark};
+    --alert-success-bg: #{variables.$alert-success-bg-dark};
+    --alert-success-border: #{variables.$alert-success-border-dark};
+
+    --alert-danger-accent: #{variables.$alert-danger-dark};
+    --alert-danger-bg: #{variables.$alert-danger-bg-dark};
+    --alert-danger-border: #{variables.$alert-danger-border-dark};
+
+    --alert-warning-accent: #{variables.$alert-warning-dark};
+    --alert-warning-bg: #{variables.$alert-warning-bg-dark};
+    --alert-warning-border: #{variables.$alert-warning-border-dark};
+
+    --alert-info-accent: #{variables.$alert-info-dark};
+    --alert-info-bg: #{variables.$alert-info-bg-dark};
+    --alert-info-border: #{variables.$alert-info-border-dark};
+
+    --alert-close-filter: invert(1) grayscale(100%) brightness(200%);
+}

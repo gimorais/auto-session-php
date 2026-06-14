@@ -1,0 +1,140 @@
+@use "../abstracts/variables";
+
+header {
+    position: sticky;
+    top: 0;
+
+    font-family: "Bebas Neue", sans-serif;
+    color: variables.$color-text-light;
+}
+
+.header {
+
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid var(--header-border-bottom);
+
+    --s: 170px;
+    --thickness: 15px;
+
+    background-color: variables.$header-bg-primary;
+
+    background-image: repeating-linear-gradient(
+        45deg,
+        variables.$header-bg-secondary 0 var(--thickness),
+        transparent var(--thickness) calc(var(--thickness) * 2)
+        ),
+        repeating-linear-gradient(
+        -45deg,
+        variables.$header-bg-tertiary 0 var(--thickness),
+        transparent var(--thickness) calc(var(--thickness) * 2)
+        );
+
+    background-size: var(--s) var(--s);
+
+    &-logo {
+        text-decoration: none;
+
+        &__img {
+            width: 64px;
+            height: 64px;
+            object-fit: contain;
+        }
+
+        &__title {
+            font-family: "Bebas Neue", sans-serif;
+            font-size: 2rem;
+            font-style: italic;
+            color: variables.$color-text-light;
+        }
+    }
+
+    &-nav {
+        &__link {
+            color : variables.$color-text-light;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+
+        &-btn {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            background: none;
+
+            &::before {
+                margin-left: auto;
+            }
+
+            &::after,
+            &::before {
+                content: "";
+                width: 0%;
+                height: 2px;
+                background: #fff;
+                display: block;
+                transition: 0.5s;
+            }
+
+            &:hover::after,
+            &:hover::before {
+                width: 100%;
+            }
+
+            .header-nav__link {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &--clear {
+                color: #f44336;
+                overflow: hidden;
+                isolation: isolate;
+                padding: 0.5rem 0.75rem;
+                transition: color 0.5s ease;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+
+                    width: 0;
+                    height: 2px;
+
+                    background-color: #f44336;
+                    transition: width 0.5s ease;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+
+                    width: 100%;
+                    height: 0;
+
+                    background-color: #f44336;
+                    transition: height 0.4s ease;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    color: #fff;
+                    transition-delay: 0.4s;
+
+                    &::before {
+                        width: 100%;
+                    }
+
+                        &::after {
+                        height: 100%;
+                        transition-delay: 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}

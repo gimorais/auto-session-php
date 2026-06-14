@@ -1,0 +1,129 @@
+.delete-modal {
+    .modal-content {
+        overflow: hidden;
+
+        color: var(--color-text-page);
+        background-color: var(--surface-card);
+
+        border: 1px solid var(--menu-clear-border);
+        border-radius: 1rem;
+
+        box-shadow: var(--menu-clear-shadow);
+    }
+
+    .modal-header {
+        position: relative;
+
+        padding: 1.25rem 1.5rem;
+
+        border-bottom: 1px solid var(--border-soft);
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0 0 auto;
+
+            width: 100%;
+            height: 4px;
+
+            background-color: var(--menu-clear-danger);
+        }
+    }
+
+    .modal-title {
+        margin-top: 0.15rem;
+
+        color: var(--color-text-page);
+
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.9rem;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+    }
+
+    &__tag {
+        color: var(--menu-clear-danger);
+
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+    }
+
+    &__warning {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        margin-bottom: 1rem;
+        padding: 1rem;
+
+        background-color: var(--menu-clear-icon-bg);
+
+        border: 1px solid var(--menu-clear-border);
+        border-radius: 0.8rem;
+
+        strong {
+            color: var(--menu-clear-danger);
+        }
+    }
+
+    &__icon {
+        display: grid;
+        flex-shrink: 0;
+        place-items: center;
+
+        width: 2.75rem;
+        height: 2.75rem;
+
+        color: var(--menu-clear-danger);
+        background-color: var(--surface-card);
+
+        border: 1px solid var(--menu-clear-border);
+        border-radius: 50%;
+
+        font-size: 1.15rem;
+    }
+
+    &__message {
+        color: var(--text-muted);
+    }
+
+    &__brand {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+
+        span {
+            color: var(--color-text-page);
+            font-weight: 600;
+        }
+    }
+
+    .modal-footer {
+        padding: 1rem 1.5rem;
+
+        border-top: 1px solid var(--border-soft);
+    }
+
+    .btn-close {
+        filter: var(--alert-close-filter);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .delete-modal {
+        .modal-footer {
+            flex-direction: column-reverse;
+
+            form,
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}

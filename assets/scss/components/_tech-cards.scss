@@ -1,0 +1,316 @@
+@use "../abstracts/variables";
+
+/* ========================================
+    Área de tecnologias
+======================================== */
+
+.index-main-content {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.tech {
+    padding-top: 1rem;
+
+    &__heading {
+        max-width: 700px;
+        margin: 0 auto 2rem;
+    }
+
+    &__tag {
+        display: inline-flex;
+        align-items: center;
+
+        margin-bottom: 0.55rem;
+        padding: 0.35rem 0.8rem;
+
+        color: var(--accent-primary);
+        background-color: color-mix(
+            in srgb,
+            var(--accent-primary) 9%,
+            transparent
+        );
+
+        border: 1px solid color-mix(
+            in srgb,
+            var(--accent-primary) 25%,
+            transparent
+        );
+        border-radius: 999px;
+
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        margin-bottom: 0.45rem;
+
+        color: var(--color-text-page);
+
+        font-family: "Bebas Neue", sans-serif;
+        font-size: clamp(2rem, 5vw, 2.8rem);
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        margin: 0;
+
+        color: var(--text-muted);
+        line-height: 1.6;
+    }
+}
+
+/* ========================================
+    Card de tecnologia
+======================================== */
+
+.tech-card {
+    --tech-accent: #{variables.$purple};
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 1.35rem;
+
+    color: var(--color-text-page);
+
+    background:
+        radial-gradient(
+            circle at 100% 0,
+            color-mix(
+                in srgb,
+                var(--tech-accent) 12%,
+                transparent
+            ),
+            transparent 42%
+        ),
+        var(--surface-card);
+
+    border: 1px solid var(--border-soft);
+    border-radius: 1.25rem 0.45rem 1.25rem 0.45rem;
+
+    box-shadow: var(--card-shadow);
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        left: 1.25rem;
+
+        width: 4.5rem;
+        height: 4px;
+
+        background: linear-gradient(
+            90deg,
+            var(--tech-accent),
+            transparent
+        );
+
+        border-radius: 0 0 999px 999px;
+    }
+
+    &::after {
+        content: "";
+
+        position: absolute;
+        right: -2.75rem;
+        bottom: -3.25rem;
+
+        width: 7rem;
+        height: 7rem;
+
+        border: 1.15rem solid color-mix(
+            in srgb,
+            var(--tech-accent) 6%,
+            transparent
+        );
+        border-radius: 50%;
+
+        pointer-events: none;
+    }
+
+    &:hover {
+        transform: translateY(-0.35rem);
+
+        border-color: color-mix(
+            in srgb,
+            var(--tech-accent) 48%,
+            transparent
+        );
+
+        box-shadow:
+            var(--card-shadow),
+            0 0 1.4rem color-mix(
+                in srgb,
+                var(--tech-accent) 12%,
+                transparent
+            );
+    }
+
+    &__top {
+        position: relative;
+        z-index: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        margin-bottom: 1.15rem;
+    }
+
+    &__icon {
+        display: grid;
+        place-items: center;
+
+        width: 3.25rem;
+        height: 3.25rem;
+
+        color: var(--tech-accent);
+        background-color: color-mix(
+            in srgb,
+            var(--tech-accent) 11%,
+            transparent
+        );
+
+        border: 1px solid color-mix(
+            in srgb,
+            var(--tech-accent) 26%,
+            transparent
+        );
+        border-radius: 1rem 0.3rem 1rem 0.3rem;
+
+        font-size: 1.55rem;
+
+        transition:
+            color 0.25s ease,
+            background-color 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    &:hover &__icon {
+        color: #ffffff;
+        background-color: var(--tech-accent);
+        transform: rotate(-4deg) scale(1.05);
+    }
+
+    &__category {
+        padding: 0.35rem 0.7rem;
+
+        color: var(--tech-accent);
+        background-color: color-mix(
+            in srgb,
+            var(--tech-accent) 8%,
+            transparent
+        );
+
+        border: 1px solid color-mix(
+            in srgb,
+            var(--tech-accent) 20%,
+            transparent
+        );
+        border-radius: 999px;
+
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 1;
+
+        flex: 1;
+    }
+
+    &__title {
+        margin-bottom: 0.45rem;
+
+        color: var(--color-text-page);
+
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 1.65rem;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        margin: 0;
+
+        color: var(--text-muted);
+
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+
+    /* Cores individuais */
+
+    &--php {
+        --tech-accent: #{variables.$tech-php};
+    }
+
+    &--javascript {
+        --tech-accent: #{variables.$tech-javascript};
+    }
+
+    &--html {
+        --tech-accent: #{variables.$tech-html};
+    }
+
+    &--session {
+        --tech-accent: #{variables.$tech-session};
+    }
+
+    &--bootstrap {
+        --tech-accent: #{variables.$tech-bootstrap};
+    }
+
+    &--scss {
+        --tech-accent: #{variables.$tech-scss};
+    }
+}
+
+/* ========================================
+    Responsividade
+======================================== */
+
+@media (max-width: 575.98px) {
+    .index-main-content {
+        padding-inline: 1rem;
+    }
+
+    .tech-card {
+        padding: 1.1rem;
+
+        &__icon {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        &__title {
+            font-size: 1.45rem;
+        }
+
+        &__text {
+            font-size: 0.87rem;
+        }
+    }
+}
