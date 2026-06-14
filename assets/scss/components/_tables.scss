@@ -1,10 +1,36 @@
 .data-table-wrapper {
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
 
     border: 1px solid var(--border-soft);
     border-radius: 1rem;
 
     box-shadow: var(--card-shadow);
+
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color:
+        var(--table-header-border)
+        var(--surface-table-alternate);
+
+    // Chrome, Edge, Opera e Safari
+    &::-webkit-scrollbar {
+        height: 0.65rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--surface-table-alternate);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--table-header-border);
+        border: 2px solid var(--surface-table-alternate);
+        border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: var(--table-header-text);
+    }
 }
 
 .data-table {

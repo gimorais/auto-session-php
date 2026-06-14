@@ -241,7 +241,7 @@
 <body>
     <?php require_once __DIR__ . "/includes/header.php"; ?>
 
-    <main class="maintenance-main container w-50 py-5">
+    <main class="maintenance-main container py-5">
         <section class="marca-form-section">
             <h1 class="text-center mb-4">
                 <?= $modo === "editar"

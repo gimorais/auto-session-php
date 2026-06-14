@@ -24,7 +24,7 @@
 <body>
     <?php require_once __DIR__ . "/includes/header.php"; ?>
 
-    <main class="menu-main-content w-50 mx-auto pt-5 pb-5">
+    <main class="menu-main-content container mx-auto py-5">
         <section class="menu-cadastros" aria-labelledby="tituloCadastros">
             <div class="mb-4">
                 <span class="menu-cadastros__tag">

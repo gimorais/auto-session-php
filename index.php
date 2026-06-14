@@ -28,7 +28,7 @@
 <body>
     <?php require_once __DIR__ . "/includes/header.php"; ?>
     
-    <main class="index-main-content container w-50 py-5">
+    <main class="index-main-content container py-5">
         <section class="hero pb-4">
             <h1 class="text-center pb-2">Mini Sistemas de Veículos</h1>
             <p>Este sistema foi desenvolvido para fins educacionais, como atividade prática de PHP, JavaScript, HTML e sessões. O objetivo é simular um cadastro de marcas e modelos de veículos sem utilizar banco de dados.</p>
