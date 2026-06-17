@@ -30,7 +30,7 @@
     
     <main class="index-main-content container py-5">
         <section class="hero pb-4">
-            <h1 class="text-center pb-2">Mini Sistemas de Veículos</h1>
+            <h1 class="text-center pb-2">Sistema de Cadastro de Marcas e Modelos</h1>
             <p>Este sistema foi desenvolvido para fins educacionais, como atividade prática de PHP, JavaScript, HTML e sessões. O objetivo é simular um cadastro de marcas e modelos de veículos sem utilizar banco de dados.</p>
             <p>Os dados cadastrados são armazenados temporariamente em <strong>$_SESSION</strong>, permanecendo disponíveis durante a navegação do usuário na sessão atual.</p>
         </section>
